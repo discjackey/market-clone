@@ -2,13 +2,14 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100vw;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   border-top: 1px solid #eaeaea;
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: white;
 }
 
 .footer-block {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 25px 0px 25px;
+  padding: 25px 25px 25px 25px;
   cursor: pointer;
 }
 
@@ -28,6 +29,22 @@ footer {
   font-size: 10px;
 }
 
+@keyframes icons-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .footer-icons__img {
   width: 30px;
+}
+
+.footer-icons:hover .footer-icons__img {
+  animation: 2s icons-float;
 }
