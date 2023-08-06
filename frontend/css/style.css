@@ -27,7 +27,7 @@ body {
   background-color: salmon;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   .media-info-msg {
     display: none;
   }
