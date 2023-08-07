@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form id="login-form" action="/login" method="POST">
+      <div>Signup</div>
+      <div>
+        <label for="id">ID: </label>
+        <input type="text" id="id" name="id" required />
+      </div>
+      <div>
+        <label for="password">PW: </label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+      <div id="login-error"></div>
+    </form>
+  </body>
+</html>
