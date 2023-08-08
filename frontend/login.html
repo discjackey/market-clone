@@ -7,7 +7,7 @@
   </head>
   <body>
     <form id="login-form" action="/login" method="POST">
-      <div>Signup</div>
+      <div>Login</div>
       <div>
         <label for="id">ID: </label>
         <input type="text" id="id" name="id" required />
@@ -19,7 +19,9 @@
       <div>
         <button type="submit">Login</button>
       </div>
-      <div id="login-error"></div>
+      <div id="login-info"></div>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

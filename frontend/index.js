@@ -56,8 +56,20 @@ const renderData = (data) => {
 };
 
 const fetchList = async () => {
+  const accessToken = window.localStorage.getItem("token");
+
   // post 에서 /items 라는 패스에 api를 지정했지만 이번에는 get 요청이기 때문에 둘다 쓸 수 있다
-  const res = await fetch("/items");
+  const res = await fetch("/items", {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  if (res.status === 401) {
+    alert("로그인이 필요합니다");
+    window.location.pathname = "/login.html";
+    return;
+  }
   const data = await res.json();
   renderData(data);
 };

@@ -18,7 +18,6 @@ const handleSubmit = async (event) => {
   if (checkPassword()) {
     const sha256Password = sha256(formData.get("password"));
     formData.set("password", sha256Password);
-    console.log(formData.get("password"));
     const res = await fetch("/signup", {
       method: "POST",
       body: formData,
